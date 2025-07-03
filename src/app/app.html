@@ -1,8 +1,8 @@
 <p>{{ author }}</p>
 <p>{{ title }}</p>
 
-
 <section>
+  <!--
   <h2>Signals</h2>
   <div>
     <p>Counter: {{ counter() }}</p>
@@ -20,7 +20,7 @@
 
   <h2>Control flow</h2>
 
-  <!-- <p>{{ x }}</p>
+  <p>{{ x }}</p>
 @if( x === 10) {
   <p>x é uguale a 10</p>
 }
@@ -43,7 +43,7 @@
   }
 } -->
 
-  <div class="students">
+  <!-- <div class="students">
     @for(student of students(); track student.id; let idx=$index, c=$count, e=$even, o=$odd, f=$first, l=$last) {
     <div class="student">
 
@@ -65,7 +65,23 @@
     }
     <button (click)="addStudent()">Add student</button>
     <button (click)="updateStudent(3)">Update student</button>
-  </div>
+  </div> -->
+
+  <section>
+    <h2>Data bindings</h2>
+
+    <div>
+      <p>NgModel</p>
+      <input type="text" [(ngModel)]="textValue">
+      Text: {{ textValue }}
+    </div>
+
+    <div>
+      <p>Signals</p>
+      <input type="text" [value]="textValue2()" (input)="updateText2($event)">
+      Text: {{ textValue2() }}
+    </div>
+  </section>
 
 </section>
 <router-outlet></router-outlet>

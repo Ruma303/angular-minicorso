@@ -1,10 +1,11 @@
 import { Component, signal } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, FormsModule],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })
@@ -52,4 +53,16 @@ export class App {
       ));
     }
   }
+
+  // Data binding
+  textValue = 'Hello, Angular!';
+
+  textValue2 = signal('Hello, Angular!');
+
+  updateText2(e: Event) {
+    if (e.target instanceof HTMLInputElement) {
+      this.textValue2.set(e.target.value);
+    }
+  }
+
 }
