@@ -1,8 +1,9 @@
 import { Component, signal } from '@angular/core';
+import { NgClass, NgStyle } from '@angular/common';
 
 @Component({
   selector: 'box',
-  imports: [],
+  imports: [NgClass, NgStyle],
   templateUrl: './box.html',
   styles: `
     .box {
@@ -16,11 +17,22 @@ import { Component, signal } from '@angular/core';
       font-size: 16px;
       color: darkblue;
     }
-    button {
+    button, btn {
       margin-bottom: 10px;
       padding: 5px 10px;
       font-size: 14px;
       cursor: pointer;
+      border-radius: 4px;
+    }
+    .btn-primary {
+      background-color: #007bff;
+      color: white;
+      border: none;
+    }
+    .btn-secondary {
+      background-color: #6c757d;
+      color: white;
+      border: none;
     }
   `
 })
@@ -47,4 +59,5 @@ export class Box {
     }
   }
 
+  fontSize = signal(16);
 }
