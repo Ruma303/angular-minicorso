@@ -1,0 +1,17 @@
+<h3>Classes</h3>
+
+<button (click)="toggleBox()">Toggle Class</button>
+<div [class.box]="box()">Content</div>
+<div [class]="box() ? 'box' : ''">Content</div>
+
+<h3>Styles</h3>
+
+<button (click)="toggleStyle()">Toggle Style</button>
+<div [style.backgroundColor]="bgColor()">Style</div>
+<div [style]="'background-color: ' + bgColor() + ';'">Style</div>
+
+<h3>Dimensions</h3>
+<label for="width">Change width</label>
+<br>
+<input type="range" [value]="width()" (input)="changeWidth($event)">
+<div [class.box]="box()" [style.width.px]="width()">Content</div>
