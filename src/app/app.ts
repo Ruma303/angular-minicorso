@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, computed, effect } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
@@ -24,6 +24,7 @@ export class App {
 
   //* Signals
   counter = signal(0);
+  doubleCounter = computed(() => this.counter() * 2);
 
   increment() {
     this.counter.update(c => c + 1);
@@ -36,6 +37,18 @@ export class App {
   reset() {
     this.counter.set(0);
   }
+
+  // Effect
+  constructor() {
+    effect(() => {
+      console.log('Counter changed:', this.counter());
+    });
+  }
+
+  // counterEffect = effect(() => {
+  //   console.log('Counter changed:', this.counter());
+  // });
+
 
   addStudent() {
     const id = this.students().length + 1;
