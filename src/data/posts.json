@@ -1,0 +1,70 @@
+{
+  "posts": [
+    {
+      "userId": 1,
+      "id": "1",
+      "title": "Introduzione ad Angular",
+      "body": "Angular è un framework potente per lo sviluppo di applicazioni web moderne."
+    },
+    {
+      "userId": 2,
+      "id": "2",
+      "title": "Componenti in Angular",
+      "body": "I componenti sono i blocchi fondamentali di ogni applicazione Angular."
+    },
+    {
+      "userId": 1,
+      "id": "3",
+      "title": "Servizi e Dependency Injection",
+      "body": "I servizi permettono di condividere dati e logica tra componenti diversi."
+    },
+    {
+      "userId": 3,
+      "id": "4",
+      "title": "Routing in Angular",
+      "body": "Il modulo Router di Angular consente la navigazione tra diverse viste."
+    },
+    {
+      "userId": 2,
+      "id": "5",
+      "title": "Gestione dello Stato",
+      "body": "Gestire lo stato in Angular può essere fatto con signals o librerie come NgRx."
+    },
+    {
+      "userId": 1,
+      "id": "6",
+      "title": "HTTP Client",
+      "body": "Angular fornisce HttpClient per effettuare richieste HTTP verso API esterne."
+    },
+    {
+      "userId": 3,
+      "id": "7",
+      "title": "Pipes Personalizzate",
+      "body": "Le pipes permettono di trasformare i dati direttamente nei template."
+    },
+    {
+      "userId": 2,
+      "id": "8",
+      "title": "Direttive Strutturali",
+      "body": "Le direttive come *ngIf e *ngFor modificano la struttura del DOM."
+    },
+    {
+      "userId": 1,
+      "id": "9",
+      "title": "Form in Angular",
+      "body": "Angular supporta sia template-driven che reactive forms per la gestione dei form."
+    },
+    {
+      "userId": 3,
+      "id": "10",
+      "title": "Testing in Angular",
+      "body": "Angular offre strumenti integrati per il testing di componenti e servizi."
+    },
+    {
+      "id": 473,
+      "userId": 1,
+      "title": "New Post",
+      "body": "This is a new post created by the user."
+    }
+  ]
+}

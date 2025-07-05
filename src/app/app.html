@@ -1,11 +1,4 @@
 <section>
-  <div>
-    @for(student of reactiveStudents(); track student.id) {
-      <p>Name: {{ student.name }}, rate: {{ student.rate }}</p>
-    }
-    <hr>
-    <p>Best student: {{ bestStudent().name }}</p>
-    <button (click)="addStudent('Maria Smith', 10)">Add student</button>
-  </div>
+  <client></client>
 </section>
 <router-outlet></router-outlet>

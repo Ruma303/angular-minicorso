@@ -1,35 +1,15 @@
-import { Component, inject, signal, computed } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
-import { Students } from './services/students';
-import Student from './types/students.type';
+import { Client } from './http/client/client';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FormsModule],
+  imports: [RouterOutlet, FormsModule, Client],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })
 export class App {
-  students = inject(Students);
 
-  reactiveStudents = signal<Student[]>([]);
-
-  ngOnInit() {
-    this.reactiveStudents.set(this.students.students);
-  }
-
-  addStudent(name: string, rate: number) {
-    const newStudent: Student = {
-      id: this.reactiveStudents().length + 1,
-      name,
-      rate
-    };
-    this.reactiveStudents.update(students => [...students, newStudent]);
-  }
-
-  bestStudent = computed(() => {
-    return this.students.getBestStudent(this.reactiveStudents());
-  });
 }
