@@ -3,8 +3,12 @@ import { Component, input, signal, effect } from '@angular/core';
 @Component({
   selector: 'card',
   imports: [],
-  templateUrl: './card.html',
-  styleUrl: './card.css'
+  template: `
+  <h3>{{ title() }}</h3>
+  <p>{{ description() }}</p>
+  <p>{{ counter() }}</p>
+  <img [src]="imageUrl()" alt="image" />`,
+  styles: ``
 })
 export class Card {
 
@@ -12,7 +16,6 @@ export class Card {
   description = input<string>('Default Description');
   start = () => Math.floor(Math.random() * 100);
   counter = signal(0);
-
   imageUrl = signal('https://picsum.photos/150/100');
 
   constructor() {

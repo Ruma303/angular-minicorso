@@ -3,5 +3,13 @@
     [title]="'Required title'"
     [description]="'New Description'"
   />
+  <counter [(number)]="number"
+  />
+  <send-message ></send-message>
+
+  <div>
+    Message received: {{ messageReceived() }}
+  </div>
+
 </section>
 <router-outlet></router-outlet>
