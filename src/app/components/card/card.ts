@@ -7,7 +7,29 @@ import { Component, input, signal, effect } from '@angular/core';
   <h3>{{ title() }}</h3>
   <p>{{ description() }}</p>
   <p>{{ counter() }}</p>
-  <img [src]="imageUrl()" alt="image" />`,
+  <img [src]="imageUrl()" alt="image" />
+  <div>
+    <h4>ng-content</h4>
+    <ng-content></ng-content>
+  </div>
+  <br>
+  <hr>
+  <br>
+  <section>
+    <div>
+      <ng-content></ng-content>
+    </div>
+    <header>
+      <ng-content select="[header]"></ng-content>
+    </header>
+    <main>
+      <ng-content select="[main]"></ng-content>
+    </main>
+    <footer>
+      <ng-content select="[footer]"></ng-content>
+    </footer>
+  </section>
+  `,
   styles: ``
 })
 export class Card {

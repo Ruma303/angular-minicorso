@@ -1,14 +1,13 @@
 <section>
-  <card
-    [title]="'Required title'"
-    [description]="'New Description'"
-  />
-  <counter [(value)]="number" />
+  <card [title]="'Required title'" >
+    Contenuto creato e proiettato dal componente genitore
+  </card>
 
-  <notify-button (notified)="onMessageReceived($event)"></notify-button>
-  <div>
-    Notification received from child: {{ messageReceived() }}
-  </div>
-
+   <card [title]="'Required title'" >
+    <div>Contenuto di default</div>
+    <div header>Contenuto per header</div>
+    <div main>Contenuto per main</div>
+    <div footer>Contenuto per footer</div>
+  </card>
 </section>
 <router-outlet></router-outlet>
