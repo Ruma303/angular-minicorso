@@ -3,12 +3,11 @@
     [title]="'Required title'"
     [description]="'New Description'"
   />
-  <counter [(number)]="number"
-  />
-  <send-message ></send-message>
+  <counter [(value)]="number" />
 
+  <notify-button (notified)="onMessageReceived($event)"></notify-button>
   <div>
-    Message received: {{ messageReceived() }}
+    Notification received from child: {{ messageReceived() }}
   </div>
 
 </section>

@@ -3,12 +3,12 @@ import { FormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
 import { Card } from './components/card/card';
 import { Counter } from './components/counter/counter';
-import { SendMessage } from "./components/send-message/send-message";
+import { NotifyButton } from "./components/notify-button/notify-button";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FormsModule, Card, Counter, SendMessage],
+  imports: [RouterOutlet, FormsModule, Card, Counter, NotifyButton],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })
