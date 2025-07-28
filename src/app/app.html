@@ -1,13 +1,20 @@
 <section>
-  <card
-    [title]="'Required title'"
-    [description]="'New Description'"
-  />
+  <card [title]="'Required title'" [description]="'New Description'" />
   <counter [(value)]="number" />
 
   <notify-button (notified)="onMessageReceived($event)"></notify-button>
   <div>
     Notification received from child: {{ messageReceived() }}
+  </div>
+
+  <div>
+    <h3>Linked signal</h3>
+    <p>as computed: {{ linkedAsComputed() }}</p>
+    <p>as signal: {{ linkedSignal() }}</p>
+
+    <button (click)="m.set(m() + 1)">Incrementa m</button>
+    <button (click)="n.set(n() + 1)">Incrementa n</button>
+    <p>multi sources: {{ linkedWithMultipleSources() }}</p>
   </div>
 
 </section>
